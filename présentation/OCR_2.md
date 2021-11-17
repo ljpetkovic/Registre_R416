@@ -54,7 +54,7 @@ blockquote:before{
   content: unset;
 }
 
-      
+
 blockquote:after{
   content: unset;
 }
@@ -111,7 +111,7 @@ _Registre du Comité d'administration du Théâtre français de S. M. l'Empereur
   * Impact de la couverture du document, des traces de l'écriture de la page précédante / suivante, des taches etc. sur la qualité de transcription
 
 
---- 
+---
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![width:350](img/découpage.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![width:290](img/découpé.png)
 
@@ -365,14 +365,51 @@ Art. 2e
 ---
 
 ## IV&nbsp;&nbsp;&nbsp; Évaluation
-...
+1. Mesures d'évaluation
+2. Outils d'évaluation
+3. Comparaison des OCR
 
 ---
-...
-* Préparer les données de vérite-terrain (angl. _ground truth_, _GT_)
-* Documents de référence corrigés manuellement (.txt)
-* ocrevalUAtion ([dépôt GitHub](https://github.com/impactcentre/ocrevalUAtion))
+## Mesures
 
----
+2 mesures principales pour évaluer la qualité d'un OCR :
+
+- *Character error rate* (CER) : pourcentage de caractères erronés dans le document
+- *Word error rate* (WER) : pourcentage de mots qui contiennent des erreurs
+
+Types d'erreurs : substitution, insertion, délétion
+
+Exemple :
+
+|                                                    | Texte du manuscrit                                           | Sortie d'OCR                                                 |
+| -------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![](/home/johanna/Documents/ObTic/OCR/exemple.jpg) | Arrêté de M. le<br />surintendant<br />relatif à Mlles<br />Mars et Leverd,<br />qui fixe leurs<br />droits respectifs. | Arrêté de M. le<br/>surintendant<br/>relatif à M<span style="color:red">o</span>le<span style="background-color:yellow"> </span><br/>Mars et Leverd<br/>qui fixe leurs<br/>droits res<span style="background-color:yellow"> </span>pe<span style="color:red">r</span>tifs. |
+
+------
+
+## Outil d'évaluation
+
+Étapes pour l'évaluation : 
+
+- Corriger manuellement une partie des sorties OCR (*ground truth*)
+- Comparer les pages corrigées et leur version océrisée
+
+Outil de comparaison : **ocrevalUAtion** (https://github.com/impactcentre/ocrevalUAtion)
+
+**Installation** (Linux / MacOs)
+
+```bash
+git clone https://github.com/impactcentre/ocrevalUAtion.git
+mvn package
+```
+
+## Comparaison des OCR
+
+
+
+------
+
+
 
 ## V&nbsp;&nbsp;&nbsp; Conclusion
+
