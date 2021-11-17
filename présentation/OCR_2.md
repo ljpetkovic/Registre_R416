@@ -54,7 +54,7 @@ blockquote:before{
   content: unset;
 }
 
-      
+
 blockquote:after{
   content: unset;
 }
@@ -111,7 +111,7 @@ _Registre du Comité d'administration du Théâtre français de S. M. l'Empereur
   * Impact de la couverture du document, des traces de l'écriture de la page précédante / suivante, des taches etc. sur la qualité de transcription
 
 
---- 
+---
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![width:350](img/découpage.png)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![width:290](img/découpé.png)
 
@@ -365,14 +365,67 @@ Art. 2e
 ---
 
 ## IV&nbsp;&nbsp;&nbsp; Évaluation
-...
+1. Mesures d'évaluation
+2. Outil d'évaluation
+3. Comparaison des modèles HTR
 
 ---
-...
-* Préparer les données de vérite-terrain (angl. _ground truth_, _GT_)
-* Documents de référence corrigés manuellement (.txt)
-* ocrevalUAtion ([dépôt GitHub](https://github.com/impactcentre/ocrevalUAtion))
+## Mesures
 
----
+Paramètres de qualité : **reconnaissance des caractères**, reconnaissance de la mise en page
+
+2 mesures principales pour évaluer la reconnaissance de caractères :
+
+- *Character error rate* (CER) : pourcentage de caractères erronés dans le document
+- *Word error rate* (WER) : pourcentage de mots qui contiennent des erreurs
+
+Types d'erreurs : substitution, insertion, délétion
+
+| Exemple                                                      | Texte du manuscrit                                           | Sortie d'OCR                                                 |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![](/home/johanna/Documents/ObTic/OCR/Registre_R416/présentation/exemple.jpg) | Arrêté de M. le<br />surintendant<br />relatif à Mlles<br />Mars et Leverd,<br />qui fixe leurs<br />droits respectifs. | Arrêté de M. le<br/>surintendant<br/>relatif à M<span style="color:red">o</span>le<span style="background-color:yellow"> </span><br/>Mars et Leverd<br/>qui fixe leurs<br/>droits res<span style="background-color:yellow"> </span>pe<span style="color:red">r</span>tifs. |
+
+------
+
+## Outil d'évaluation
+
+Étapes pour l'évaluation : 
+
+- Corriger manuellement une partie des sorties OCR (*ground truth*)
+
+Outil d'édition de *ground truth* : Aletheia (https://www.primaresearch.org/tools/Aletheia/Editions)
+
+- Comparer les pages corrigées et leur version océrisée
+
+Outil de comparaison : **ocrevalUAtion** (https://github.com/impactcentre/ocrevalUAtion)
+
+------
+
+## Comparaison des modèles (segmentation)
+
+|                 | Transkribus                        | Kraken                           | eScriptorium                     |
+| --------------- | ---------------------------------- | -------------------------------- | -------------------------------- |
+| Détection marge | <span style="color:green">✔</span> | <span style="color:red">✗</span> | <span style="color:red">✗</span> |
+
+------
+
+## Comparaison des modèles (reconnaissance de caractères)
+
+|                  | Transkribus | Kraken (avec binarisation) | Kraken (sans binarisation) | eScriptorium |
+| ---------------- | ----------- | -------------------------- | -------------------------- | ------------ |
+| CER              | **10,70**   | 41,67                      | 55,8                       | 36,96        |
+| WER              | **35,00**   | 80,23                      | 84,86                      | 72,59        |
+| WER (sans ordre) | **30,70**   | 63,20                      | 53,9                       | 54,28        |
+
+
+
+![image-20211117162024725](/home/johanna/.config/Typora/typora-user-images/image-20211117162024725.png)
+
+
+
+------
+
+
 
 ## V&nbsp;&nbsp;&nbsp; Conclusion
+
