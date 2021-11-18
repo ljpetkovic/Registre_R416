@@ -336,7 +336,7 @@ sous nommés meubres duComité deLecture pourlespières nouvelles, M. M
 
 **Connexion au serveur** 
 
-* [Instance eScriptorium](http://145.238.157.11/login/) en ligne
+* [Instance eScriptorium](https://escriptorium.fr/login/) en ligne
 * Nom d'utilisateur : `guest`
 * Mot de passe : `GuestAccount2021!` 
 * Tableau de bord pour la gestion des documents créés par et partagés avec un compte
