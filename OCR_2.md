@@ -263,16 +263,16 @@ Anpérias M. M. FSeury Tahue Nicnos damors demuer &amp; Lacave de nomciprent
 a heures dans laSaile des Séances du Contite d adninntration 
 d Bernard notitie du arrete deMr Le surentendans desoictaite
 oortans l'arganisation d'un du Comite d'Aduntration à d'autie d
-conité de Lechere confomeuient au denret inpérias d abre d d
-'arretes dous airie doncu
-Dganigation  de Frenrier Chambellau de S. M. d'Ernvereur et Roi ouventeudant de
-Vix Comile  Svertactes, du les articles 30 &amp; 49 du Décres unvérenl du1 5. 8bres 1812
-d'Achunestration, portaux orgouisation du Théatre Français, Arrite cíque Suit
-drtefer
-mane me Pourt, nommés meuibres du Comité d'Aduinistration M. M. Feury, Taluie
-d
-Michot Damars Denret Lacaue
-dt, 2e
+conité de Lechere confomeuient au denret inpérias d 
+[...]
+Art. 3e         # segmentation correcte
+le Commiaire unvérial ent charge del'exécution dupréfenr arrêté
+PParis ce 13 Janv° 1813. Sigui le Cle de Reimurat 
+Argandatton  de Bremier Chambellau deS. M. l'Erupereur &amp; Roi, sureutendant des
+dis Cortute de svectaies, du l'Article 68 du Decret nuvérial du 15, 0bre portant orgouisation
+du Theitre François, Arrété dt due Suis.
+2rt. de         # bonne segmentation
+asous nommés meuibres du Comité de Vecture pourlespières crouvelles, M. M
 ```
 
 
@@ -293,14 +293,17 @@ du Cnéatre français deS. M. l'Empereur et Roi,
 Organisation
 Paris ce 16 Janvier 1813.~
 d'après l'invitation duNr Bernard recptinant lesfouctions de Commisaire
-à 2 heures dans laSalle desséances du Conrité d'Adminsstration-
-Mr Beruardnotifie deux arrétés deMr lesurintendant desspectarles
-portaut l'organisation, l'un du Comité d'Adiniuntration &amp;'autre du
-Comité de Lecture, conformément au décret inpérial du15 8bre 1 812-
-Ces arrêtés sour arrisiconcur.
-Svertacles, du les articles 30 &a 49 du décres inpérial du15 8bre 1812
-Sous nommés meurbres duComité d'Aduinistration M. M. Feury, Talure
-le Commipaire inpérial est charge del'exécution
+à 2 heures dans laSalle desséances du Conrité 
+[...]       
+Art. 3.           # segmentation incorrecte
+Art. 2°.          # segmentation incorrecte
+Art. 1er          ...
+Art. 2e
+Art. 3e
+Art. 1er
+Verture.
+20
+sous nommés meubres duComité deLecture pourlespières nouvelles, M. M
 ```
 ---
 
