@@ -88,7 +88,7 @@ _Registre du Comité d'administration du Théâtre français de S. M. l'Empereur
 * Texte manuscrit
 
 * **Document** : collection d'images formant un ensemble
-* Échantillon de 10 pages
+* Échantillon de 10 pages ([dépôt GitHub](https://github.com/ljpetkovic/Registre_R416))
 
 ---
 
@@ -140,17 +140,17 @@ _Registre du Comité d'administration du Théâtre français de S. M. l'Empereur
 Plusieurs paramètres :
 * Langue : française
 * Alphabet : latin
-* Type d'écriture : [_coulée_](https://books.google.fr/books?id=lcHRgDFtBSYC&pg=PA110&lpg=PA110&dq=ronde”,+“bâtarde”+and+“coulée&source=bl&ots=HjaRrULe19&sig=ACfU3U1qwQZuF15hXKxv1DXqcAzFIJueMg&hl=en&sa=X&ved=2ahUKEwi4oZmeoIf0AhWqyIUKHYQPA5kQ6AF6BAgCEAM#v=onepage&q=ronde”%2C%20“bâtarde”%20and%20“coulée&f=false) ![width:190](img/coulee.png) [_ronde_](https://books.google.fr/books?id=lcHRgDFtBSYC&pg=PA110&lpg=PA110&dq=ronde”,+“bâtarde”+and+“coulée&source=bl&ots=HjaRrULe19&sig=ACfU3U1qwQZuF15hXKxv1DXqcAzFIJueMg&hl=en&sa=X&ved=2ahUKEwi4oZmeoIf0AhWqyIUKHYQPA5kQ6AF6BAgCEAM#v=onepage&q=ronde”%2C%20“bâtarde”%20and%20“coulée&f=false) ![width:180](img/ronde.png) [_bâtarde_](http://classes.bnf.fr/ecritures/grand/e142.htm) ![width:200](img/batarde.png)
+* Type d'écriture : [_coulée_](https://books.google.fr/books?id=lcHRgDFtBSYC&pg=PA110&lpg=PA110&dq=ronde”,+“bâtarde”+and+“coulée&source=bl&ots=HjaRrULe19&sig=ACfU3U1qwQZuF15hXKxv1DXqcAzFIJueMg&hl=en&sa=X&ved=2ahUKEwi4oZmeoIf0AhWqyIUKHYQPA5kQ6AF6BAgCEAM#v=onepage&q=ronde”%2C%20“bâtarde”%20and%20“coulée&f=false) ![width:190](img/coulee.png) [_ronde_](https://books.google.fr/books?id=lcHRgDFtBSYC&pg=PA110&lpg=PA110&dq=ronde”,+“bâtarde”+and+“coulée&source=bl&ots=HjaRrULe19&sig=ACfU3U1qwQZuF15hXKxv1DXqcAzFIJueMg&hl=en&sa=X&ved=2ahUKEwi4oZmeoIf0AhWqyIUKHYQPA5kQ6AF6BAgCEAM#v=onepage&q=%22ronde”&f=false) ![width:180](img/ronde.png) [_bâtarde_](http://classes.bnf.fr/ecritures/grand/e142.htm) ![width:200](img/batarde.png)
 * Type de documents : administratif, ~ordonnances, chancellerie
 * Époque : début du XIX$^e$ s.
-* Moteur de reconnaissance de caractères : HTR+ 
+* Moteur de reconnaissance de caractères : HTR ou HTR+ (plus performant, _cf._ [ici](https://readcoop.eu/wp-content/uploads/2018/11/LEIFERT-CITLAB.pdf))
 * CER (taux d'erreur de caractère, angl. _character error rate_)
 
 ---
 
 ## Choix du modèle de transcription
 
-Modèles d'HTR accessibles au public (_cf._ le site de Transkribus) : 
+Modèles d'HTR+ accessibles au public (_cf._ le site de Transkribus) : 
 * [French — General Model](https://readcoop.eu/model/french-general-model/) (8.5% CER)
 * [Charter Scripts (German, Latin, French)](https://readcoop.eu/model/charter-scripts-german-latin-french/) (6.32% CER)
 * [French and Latin Chancery documents](https://readcoop.eu/model/french-and-latin-chancery-documents/) (5.33% CER)
@@ -170,8 +170,15 @@ Modèles d'HTR accessibles au public (_cf._ le site de Transkribus) :
 
 ## I&nbsp;&nbsp;&nbsp; Transkribus
 
-### 3. Lancement de l'HTR 
+### 3. Préliminaires 
+### 4. Lancement de l'HTR 
 
+---
+
+## Préliminaires
+
+* S'inscrire / se connecter à [Transkribus](https://readcoop.eu/transkribus/) avec votre compte
+* Ajouter les propriétaires de la collection `Registre_R416` via email
 ---
 
 ## Lancement de l'HTR
@@ -219,8 +226,6 @@ Modèles d'HTR accessibles au public (_cf._ le site de Transkribus) :
 ### 1. Choix du modèle de transcription
 
 ---
-## Choix du modèle de transcription
-
 ## Choix du modèle de transcription
 
 * Modèles d'HTR accessibles au public (les [nouveaux](https://gitlab.inria.fr/dh-projects/kraken-models) et les [anciens](https://gitlab.inria.fr/dh-projects/kraken-models/-/tree/master/segmentation%20models/archived), ALMAnaCH Inria)
