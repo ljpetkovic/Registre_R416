@@ -408,9 +408,12 @@ Paramètres de qualité : **reconnaissance des caractères**, reconnaissance de 
 
 Types d'erreurs : substitution, insertion, délétion
 
+---
+
+## Résultats
 | Exemple                                                      | Texte du manuscrit                                           | Sortie d'OCR                                                 |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![](/home/johanna/Documents/ObTic/OCR/Registre_R416/présentation/exemple.jpg) | Arrêté de M. le<br />surintendant<br />relatif à Mlles<br />Mars et Leverd,<br />qui fixe leurs<br />droits respectifs. | Arrêté de M. le<br/>surintendant<br/>relatif à M<span style="color:red">o</span>le<span style="background-color:yellow"> </span><br/>Mars et Leverd<br/>qui fixe leurs<br/>droits res<span style="background-color:yellow"> </span>pe<span style="color:red">r</span>tifs. |
+| ![](img/exemple.jpg) | Arrêté de M. le<br />surintendant<br />relatif à Mlles<br />Mars et Leverd,<br />qui fixe leurs<br />droits respectifs. | Arrêté de M. le<br/>surintendant<br/>relatif à M**o** **le**<br/>Mars et Leverd<br/>qui fixe leurs<br/>droits respe**r**tifs. |
 
 ------
 
@@ -432,7 +435,7 @@ Outil de comparaison : **ocrevalUAtion** (https://github.com/impactcentre/ocreva
 
 |                 | Transkribus                        | Kraken                           | eScriptorium                     |
 | --------------- | ---------------------------------- | -------------------------------- | -------------------------------- |
-| Détection marge | <span style="color:green">✔</span> | <span style="color:red">✗</span> | <span style="color:red">✗</span> |
+| Détection marge | ✔ | ✗ | ✗ |
 
 ------
 
@@ -444,16 +447,46 @@ Outil de comparaison : **ocrevalUAtion** (https://github.com/impactcentre/ocreva
 | WER              | **35,00**   | 80,23                      | 84,86                      | 72,59        |
 | WER (sans ordre) | **30,70**   | 63,20                      | 53,9                       | 54,28        |
 
+---
+## Comparaison des modèles (reconnaissance de caractères)
+
+![image-20211117162024725](img/graphique_CER_WER.png)
 
 
-![image-20211117162024725](/home/johanna/.config/Typora/typora-user-images/image-20211117162024725.png)
+---
+## V. Amélioration du modèle
 
-
+1. Réentraînement du modèle
+2. Évaluation du nouveau modèle
+3. Utilisation avancée : les formats hOCR et ALTO
 
 ------
 
+##  Réentraînement du modèle
 
+Possible sur **Kraken**.
 
-## V&nbsp;&nbsp;&nbsp; Conclusion
+L'outil Kraken détecte d'abord les segments de texte. Il faut alors établir les vérités-terrain (*ground truth*), puis fournir au système les paires images-texte pour qu'il "apprenne" à reconnaître l'écriture du document. Ces nouvelles connaissances sont ajoutées à celles du modèle qu'on réentraîne.
+
+------
+
+##  Évaluation du nouveau modèle
+
+Entraînement sur 4 fichiers (c'est très peu !)
+
+L'évaluation doit se faire sur un fichier qui n'a pas servi à l'entraînement.
+
+Evaluation sur 1 page :
+
+|                  | Modèle initial | Modèle réentraîné |
+| ---------------- | -------------- | ----------------- |
+| CER              | 55,9           | 56,4              |
+| WER              | 91             | 91,4              |
+| WER (sans ordre) | 68             | **57**            |
+
+------
+
+## VI. Pour finir
 
 * dépôt [GitHub](https://github.com/ljpetkovic/Registre_R416)
+
